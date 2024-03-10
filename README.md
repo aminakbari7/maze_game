@@ -3,7 +3,7 @@
 <div algin="left">
  <p>S= start</p>
  <p>G= goal</p>
- <p>Every time you click on "refresh" , the game randomly designs the map</p>
+ <p>Every time you click on "refresh" , The game map changes randomly</p>
 </div>
 
 <div algin="center">
