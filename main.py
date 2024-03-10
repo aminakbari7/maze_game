@@ -32,6 +32,8 @@ class node:
         gfirst=first
         while len(front)>0:
          first=front.pop(0)
+
+         
     #right
          if first!=0:
           if first.y+1<size_y:
@@ -40,7 +42,7 @@ class node:
                 first.right.parent=first
                 if map[first.right.x][first.right.y]==8:
                     return first
-                front.append(first.up)
+                front.append(first.right)
                 explord.append(str(first.x)+str(first.y+1))
     #left
           if first.y-1>=0 :
@@ -84,7 +86,7 @@ def main():
     map[random.randint(0,size_x-1)][random.randint(0,size_y-1)]=8
     flag=node.solve(map,sx,sy)
     if flag!=0 and flag!=None and flag!=-2:
-     print("----------------",flag.x,flag.y)
+     print("----------------","solved")
      while True:
          if flag!=0:
             if map[flag.x][flag.y]!=7 and map[flag.x][flag.y]!=8:
@@ -93,7 +95,7 @@ def main():
             if flag==-1 or flag==None or flag==0:
                break
     else:
-      print("----------------","javab nist") 
+      print("----------------","no answer!!!") 
     for r in range(size_x):
       for c in range(size_y):
         if map[r][c]==0:
